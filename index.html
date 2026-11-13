@@ -1,0 +1,149 @@
+
+index.html
+100%
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TAHAP 1 (HTML): Ganti judul dengan namamu -->
+  <title>CV | Nama Lengkap Kamu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="#beranda" class="logo">NamaKamu<span>.</span></a>
+    <button id="menu-btn" class="menu-btn" aria-label="Buka menu">☰</button>
+    <nav id="nav-menu">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#skill">Skill</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button id="theme-btn" class="theme-btn" aria-label="Ganti tema">🌙</button>
+  </header>
+
+  <main>
+
+    <!-- ============ BERANDA ============ -->
+    <section id="beranda" class="hero">
+      <img src="foto.jpg" alt="Foto profil" class="foto"
+           onerror="this.src='https://placehold.co/200x200?text=Foto'">
+      <p class="sapaan">Halo, saya</p>
+      <h1>Daffa Rijal Syafiq</h1>
+      <!-- TAHAP 3 (JS): teks di bawah ini akan "diketik" otomatis oleh script.js -->
+      <h2 class="mengetik"><span id="typing"></span><span class="kursor">|</span></h2>
+      <a href="#kontak" class="btn">Hubungi Saya</a>
+    </section>
+
+    <!-- ============ TENTANG ============ -->
+    <section id="tentang" class="reveal">
+      <h2 class="judul">Tentang Saya</h2>
+      <!-- TODO: tulis 3-4 kalimat tentang dirimu -->
+      <p>
+        Saya siswa kelas 11 di SMAN 1 Padang. Saya tertarik pada teknologi
+        dan sedang belajar membuat website. Cita-cita saya adalah ...
+      </p>
+      <ul class="info">
+        <li><strong>Tempat, Tgl Lahir:</strong> Padang, 16 Juni 2010</li>
+        <li><strong>Sekolah:</strong> SMAN 1 Padang</li>
+        <li><strong>Hobi:</strong> Gaming, desain, musik</li>
+      </ul>
+    </section>
+
+    <!-- ============ PENDIDIKAN ============ -->
+    <section id="pendidikan" class="reveal">
+      <h2 class="judul">Pendidikan &amp; Pengalaman</h2>
+      <div class="timeline">
+        <div class="item">
+          <span class="tahun">2024 – Sekarang</span>
+          <h3>SMAN 1 Padang</h3>
+          <p>Peminatan ... (isi sesuai jurusanmu)</p>
+        </div>
+        <div class="item">
+          <span class="tahun">2021 – 2024</span>
+          <h3>SMP Negeri ... </h3>
+          <p>Aktif di organisasi / ekstrakurikuler ...</p>
+        </div>
+        <!-- TANTANGAN: tambahkan 1 item lagi (sertifikat / lomba / organisasi) -->
+      </div>
+    </section>
+
+    <!-- ============ SKILL ============ -->
+    <section id="skill" class="reveal">
+      <h2 class="judul">Skill</h2>
+      <!-- data-level = persentase kemampuan (0-100). Jujur ya! -->
+      <div class="skill">
+        <div class="skill-label"><span>HTML</span><span>60%</span></div>
+        <div class="bar"><div class="isi" data-level="60"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label"><span>CSS</span><span>50%</span></div>
+        <div class="bar"><div class="isi" data-level="50"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label"><span>JavaScript</span><span>30%</span></div>
+        <div class="bar"><div class="isi" data-level="30"></div></div>
+      </div>
+      <!-- TANTANGAN: tambah skill non-teknis (Public Speaking, Desain, dll) -->
+    </section>
+
+    <!-- ============ PROYEK ============ -->
+    <section id="proyek" class="reveal">
+      <h2 class="judul">Proyek</h2>
+      <div class="kartu-grid">
+        <article class="kartu">
+          <h3>Website CV</h3>
+          <p>Proyek pertama saya: membuat CV online dengan HTML, CSS, dan JavaScript.</p>
+          <a href="#" class="link">Lihat proyek →</a>
+        </article>
+        <article class="kartu">
+          <h3>Proyek 2</h3>
+          <p>Ceritakan proyek / karya / prestasimu di sini.</p>
+          <a href="#" class="link">Lihat proyek →</a>
+        </article>
+        <article class="kartu">
+          <h3>Proyek 3</h3>
+          <p>Ceritakan proyek / karya / prestasimu di sini.</p>
+          <a href="#" class="link">Lihat proyek →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section id="kontak" class="reveal">
+      <h2 class="judul">Kontak</h2>
+      <p>Punya pertanyaan atau ingin berkolaborasi? Kirim pesan:</p>
+
+      <form id="form-kontak" novalidate>
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" placeholder="Nama kamu">
+        <small class="error" id="err-nama"></small>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="nama@email.com">
+        <small class="error" id="err-email"></small>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" rows="4" placeholder="Tulis pesanmu..."></textarea>
+        <small class="error" id="err-pesan"></small>
+
+        <button type="submit" class="btn">Kirim</button>
+        <p id="status" class="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="tahun-footer">2026</span> Nama Lengkap Kamu. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+Menampilkan style.css.
